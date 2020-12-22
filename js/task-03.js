@@ -41,11 +41,8 @@ galleryListRef.append(...galleryItems); */
 
 const galleryListRef = document.querySelector('#gallery');
 
-
-const creatGalleryItem = image => {
-  galleryListRef.insertAdjacentHTML('afterbegin', `<li class='gallery__image' src=${image.url} alt=${image.alt} width='300'></li>`);
-  console.log(galleryListRef);
-
-};
 const galleryItems = images.map(image =>
-  galleryListRef.insertAdjacentHTML('afterbegin', `<li class='gallery__item'><img class='gallery__image' src=${image.url} alt=${image.alt} width='300'></li>`));
+  galleryListRef.insertAdjacentHTML('afterbegin', 
+  `<li class='gallery__item'>
+  <img class='gallery__image' src=${image.url} alt=${image.alt} width='300'>
+  </li>`));
